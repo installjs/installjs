@@ -1,1 +1,1 @@
-# InstallJS: The library that installs and removes npm modules in your code
+# InstallJS: The library that lets you install and remove npm modules in your JavaScript
