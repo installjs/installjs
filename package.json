@@ -1,0 +1,8 @@
+{
+    "name": "installjs",
+    "description": "Install an npm package via your JavaScript files",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@types/node": "^20.11.30"
+    }
+}
