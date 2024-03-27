@@ -1,4 +1,4 @@
-import { spawn } from "node:child_process";
+import { spawn, ChildProcessWithoutNullStreams } from "node:child_process";
 
 /**
  * InstallJS and its functions.
@@ -12,6 +12,9 @@ import { spawn } from "node:child_process";
  * ```
  */
 namespace InstallJS {
+    export interface InstalledPackage extends ChildProcessWithoutNullStreams { }
+    export interface RemovedPackage extends ChildProcessWithoutNullStreams { }
+
     /**
      * Installs a package via `npm i`.
      * @param packages The package(s) to install.
@@ -27,7 +30,7 @@ namespace InstallJS {
     export function installPackage(packages: string | string[], options?: {
         global?: boolean,
         devDependency?: boolean
-    }) {
+    }): InstalledPackage {
         if (typeof packages === "string") {
             return spawn("npm", ["i", packages, options?.global ? "-g" : options?.devDependency ? "-D" : ""]);
         } else if (typeof packages === "object") {
@@ -51,7 +54,7 @@ namespace InstallJS {
     export function removePackage(packages: string | string[], options?: {
         global?: boolean,
         devDependency?: boolean
-    }) {
+    }): RemovedPackage {
         if (typeof packages === "string") {
             return spawn("npm", ["rm", packages, options?.global ? "-g" : options?.devDependency ? "-D" : ""]);
         } else if (typeof packages === "object") {

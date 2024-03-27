@@ -1,4 +1,5 @@
 /// <reference types="node" />
+import { ChildProcessWithoutNullStreams } from "node:child_process";
 /**
  * InstallJS and its functions.
  * @requires The latest version of Node and npm
@@ -11,6 +12,10 @@
  * ```
  */
 declare namespace InstallJS {
+    interface InstalledPackage extends ChildProcessWithoutNullStreams {
+    }
+    interface RemovedPackage extends ChildProcessWithoutNullStreams {
+    }
     /**
      * Installs a package via `npm i`.
      * @param packages The package(s) to install.
@@ -26,7 +31,7 @@ declare namespace InstallJS {
     function installPackage(packages: string | string[], options?: {
         global?: boolean;
         devDependency?: boolean;
-    }): import("child_process").ChildProcessWithoutNullStreams;
+    }): InstalledPackage;
     /**
      * Removes a package via `npm rm`.
      * @param packages The package(s) to remove.
@@ -42,6 +47,6 @@ declare namespace InstallJS {
     function removePackage(packages: string | string[], options?: {
         global?: boolean;
         devDependency?: boolean;
-    }): import("child_process").ChildProcessWithoutNullStreams;
+    }): RemovedPackage;
 }
 export default InstallJS;
