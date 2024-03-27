@@ -3,6 +3,7 @@
     "description": "Install an npm package via your JavaScript files",
     "version": "1.0.0",
     "main": "index.js",
+    "repository": "https://github.com/installjs/installjs",
     "devDependencies": {
         "@types/node": "^20.11.30"
     }
