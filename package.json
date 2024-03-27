@@ -1,7 +1,7 @@
 {
     "name": "@youssefland/installjs",
     "description": "Install an npm package via your JavaScript files",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "index.js",
     "repository": "https://github.com/installjs/installjs",
     "devDependencies": {
