@@ -1,5 +1,5 @@
 {
-    "name": "@youssefland/installjs",
+    "name": "@installjs/installjs",
     "description": "Install an npm package via your JavaScript files",
     "version": "1.0.0",
     "main": "index.js",
