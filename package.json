@@ -1,10 +1,11 @@
 {
     "name": "@installjs/installjs",
-    "description": "Install an npm package via your JavaScript files",
+    "description": "Install an npm package via your JavaScript/TypeScript files",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "dist/index.js",
     "repository": "https://github.com/installjs/installjs",
     "devDependencies": {
-        "@types/node": "^20.11.30"
+        "@types/node": "latest",
+        "typescript": "next"
     }
 }
