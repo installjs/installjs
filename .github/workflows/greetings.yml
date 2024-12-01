@@ -1,4 +1,4 @@
-name: Greetings
+name: Greet Newbies To Install.js!
 
 on: [pull_request_target, issues]
 
